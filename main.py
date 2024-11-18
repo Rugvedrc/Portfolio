@@ -6,7 +6,7 @@ from streamlit_lottie import st_lottie
 import requests
 import streamlit.components.v1 as components
 import urllib.parse
-from model_train import generate_response
+from Generate_Response import generate_response
 
 # Page configuration
 st.set_page_config(
