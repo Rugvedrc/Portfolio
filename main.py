@@ -343,11 +343,11 @@ def header_section():
     
     with col2:
         st.markdown('<h1>Rugved Chandekar</h1>', unsafe_allow_html=True)
-        st.markdown('<h3>Aspiring ML Engineer with a Passion for Building Intelligent Solutions</h3>', unsafe_allow_html=True)
+        st.markdown('<h3>Aspiring ML Engineer Exploring Intelligent Solutions</h3>', unsafe_allow_html=True)
         st.markdown("""
-        🚀 Turning ideas into reality through AI and ML<br>
-        🌟 Specialized in Machine Learning and Data Science<br>
-        🎯 Driven by curiosity, always learning and improving
+        🚀 Eager to apply AI and ML concepts to hands-on projects
+        🌟 Focused on Machine Learning and Data Science
+        🎯 Driven by curiosity and continuously learning
         """, unsafe_allow_html=True)
         
         # Social Links
