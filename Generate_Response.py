@@ -1,7 +1,9 @@
 import google.generativeai as genai
 
+api_key = st.secrets["general"]["api_key"]
+
 # Configure API key for Google Generative AI
-genai.configure(api_key="AIzaSyAf5dZ25czfRkvF3eLu2wAICyJRG5euBac")
+genai.configure(api_key=api_key)
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 # Define function to generate responses based on personal information
