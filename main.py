@@ -6,7 +6,6 @@ from streamlit_lottie import st_lottie
 import requests
 import streamlit.components.v1 as components
 import urllib.parse
-from Generate_Response import generate_response
 
 # Page configuration
 st.set_page_config(
@@ -307,10 +306,6 @@ def create_navbar():
                onclick="handleNavClick('projects')">Projects</a>
             <a href="#contact" class="nav-button {'active' if current_section == 'contact' else ''}"
                onclick="handleNavClick('contact')">Contact</a>
-            <a href="#chat" class="nav-button {'active' if current_section == 'chat' else ''}"
-               onclick="handleNavClick('chat')">
-                <i class="fas fa-robot"></i> Chat
-            </a>
         </div>
     """, unsafe_allow_html=True)
 
@@ -326,10 +321,7 @@ if 'messages' not in st.session_state:
 if 'chat_visible' not in st.session_state:
     st.session_state.chat_visible = False
 
-# AI Assistant functions
 
-def get_ai_response(message):
-    return "answer"
 
 # Header Section
 def header_section():
@@ -545,30 +537,6 @@ def contact_form():
                 st.error("Please fill in all fields.")
         st.markdown('</div>', unsafe_allow_html=True)
 
-def chat_interface():
-    st.markdown('<div id="chat" class="chat-section">', unsafe_allow_html=True)
-    st.subheader("💬 Chat with AI Assistant")
-    
-    # Display chat messages
-    for message in st.session_state.messages:
-        with st.chat_message(message["role"]):
-            st.write(message["content"])
-
-    # Chat input
-    if prompt := st.chat_input("Type your message here..."):
-        # Add user message to state and display
-        st.session_state.messages.append({"role": "user", "content": prompt})
-        with st.chat_message("user"):
-            st.write(prompt)
-#here
-        # Add assistant response to state and display
-        response = generate_response(prompt)
-        st.session_state.messages.append({"role": "assistant", "content": response})
-        with st.chat_message("assistant"):
-            st.write(response)
-
-    st.markdown('</div>', unsafe_allow_html=True)
-
 # Modified main function
 def main():
     create_navbar()
@@ -586,7 +554,6 @@ def main():
     st.markdown("---")
     contact_form()
     st.markdown("---")
-    chat_interface()  # Add chat interface at the bottom
 
 if __name__ == "__main__":
     main()
