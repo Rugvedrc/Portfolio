@@ -2138,6 +2138,483 @@ code {
     color: var(--text-3);
 }
 
+/* ===== SCROLL PROGRESS BAR ===== */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: var(--grad-2);
+    z-index: 1000;
+    transition: width 0.05s linear;
+    box-shadow: 0 0 10px rgba(124, 58, 237, 0.5), 0 0 30px rgba(124, 58, 237, 0.2);
+}
+
+/* ===== CUSTOM CURSOR ===== */
+.cursor-dot {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    background: var(--accent-light);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s, background 0.2s;
+    mix-blend-mode: difference;
+}
+
+.cursor-glow {
+    position: fixed;
+    width: 36px;
+    height: 36px;
+    border: 1.5px solid rgba(124, 58, 237, 0.4);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s var(--ease), height 0.3s var(--ease), border-color 0.3s, background 0.3s;
+}
+
+.cursor-dot.cursor-hover {
+    width: 12px;
+    height: 12px;
+    background: var(--cyan);
+}
+
+.cursor-glow.cursor-hover {
+    width: 50px;
+    height: 50px;
+    border-color: rgba(6, 182, 212, 0.5);
+    background: rgba(6, 182, 212, 0.06);
+}
+
+/* ===== PARTICLE CANVAS ===== */
+.particle-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* ===== RIPPLE EFFECT ===== */
+.ripple-effect {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    transform: translate(-50%, -50%);
+    animation: ripple-expand 0.6s ease-out forwards;
+    pointer-events: none;
+    z-index: 10;
+}
+
+@keyframes ripple-expand {
+    to {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
+}
+
+/* ===== CONFETTI ===== */
+.confetti-piece {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    pointer-events: none;
+    z-index: 10000;
+    animation: confetti-burst 0.8s ease-out forwards;
+}
+
+@keyframes confetti-burst {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(calc(cos(var(--angle)) * var(--distance)),
+                calc(sin(var(--angle)) * var(--distance) - 60px)) rotate(var(--rot)) scale(0);
+        opacity: 0;
+    }
+}
+
+/* ===== HERO SPARKS ===== */
+.hero-spark {
+    position: absolute;
+    width: var(--spark-size, 2px);
+    height: var(--spark-size, 2px);
+    background: var(--accent-light);
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+    animation: spark-float ease-in-out infinite;
+    box-shadow: 0 0 6px var(--accent);
+    z-index: 2;
+}
+
+@keyframes spark-float {
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: translateY(0) scale(0.5);
+    }
+
+    25% {
+        opacity: 0.8;
+        transform: translateY(-30px) scale(1);
+    }
+
+    50% {
+        opacity: 0.4;
+        transform: translateY(-60px) scale(0.8);
+    }
+
+    75% {
+        opacity: 0.6;
+        transform: translateY(-40px) scale(1.1);
+    }
+}
+
+/* ===== STAGGERED TAG REVEALS ===== */
+.skill-tags span {
+    opacity: 0;
+    transform: translateY(10px) scale(0.9);
+    transition: opacity 0.4s var(--ease), transform 0.4s var(--ease);
+}
+
+.skill-tags span.tag-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* ===== EXPERIENCE LIST REVEAL ===== */
+.exp-card li {
+    opacity: 0;
+    transform: translateX(-15px);
+    transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
+}
+
+.exp-card li.li-revealed {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ===== HEADING REVEAL ===== */
+.section-heading {
+    overflow: hidden;
+}
+
+.section-heading.heading-revealed {
+    animation: heading-entrance 0.8s var(--ease) forwards;
+}
+
+@keyframes heading-entrance {
+    from {
+        opacity: 0.7;
+        letter-spacing: 0.05em;
+        filter: blur(2px);
+    }
+
+    to {
+        opacity: 1;
+        letter-spacing: -0.02em;
+        filter: blur(0);
+    }
+}
+
+/* ===== SECTION GLOW DIVIDER ===== */
+.section-glow-divider {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 1px;
+    background: var(--grad-1);
+    opacity: 0.3;
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.2);
+    animation: divider-breathe 4s ease-in-out infinite;
+}
+
+@keyframes divider-breathe {
+
+    0%,
+    100% {
+        width: 200px;
+        opacity: 0.2;
+    }
+
+    50% {
+        width: 400px;
+        opacity: 0.5;
+    }
+}
+
+/* ===== TIMELINE DRAW ANIMATION ===== */
+.exp-timeline::before {
+    clip-path: inset(0 0 100% 0);
+    transition: clip-path 1.5s var(--ease);
+}
+
+.exp-timeline.timeline-animated::before {
+    clip-path: inset(0 0 0% 0);
+}
+
+/* ===== IN-VIEW ANIMATIONS ===== */
+.about-layout.in-view .about-text-col p {
+    animation: fade-slide-up 0.6s var(--ease) both;
+}
+
+.about-layout.in-view .about-text-col p:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.about-layout.in-view .about-text-col p:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.code-terminal.in-view {
+    animation: terminal-pop 0.6s var(--ease) both;
+}
+
+@keyframes fade-slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes terminal-pop {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* ===== ENHANCED SKILL CARD HOVER ===== */
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--grad-1);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s var(--ease);
+}
+
+.skill-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* ===== ENHANCED PROJECT CARD ===== */
+.project-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius);
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.05), transparent 50%, rgba(6, 182, 212, 0.05));
+    opacity: 0;
+    transition: opacity 0.5s var(--ease);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.project-card:hover::before {
+    opacity: 1;
+}
+
+/* ===== ENHANCED ACHIEVEMENT CARD ===== */
+.ach-card.ach-hovered .ach-icon {
+    animation: icon-bounce 0.5s var(--ease);
+}
+
+@keyframes icon-bounce {
+
+    0%,
+    100% {
+        transform: scale(1.15) rotate(8deg);
+    }
+
+    40% {
+        transform: scale(1.3) rotate(-5deg);
+    }
+
+    60% {
+        transform: scale(1.2) rotate(10deg);
+    }
+}
+
+/* ===== MARQUEE HOVER STATES ===== */
+.marquee-item {
+    transition: color 0.3s, transform 0.3s;
+}
+
+.marquee-item:hover {
+    transform: scale(1.1);
+}
+
+/* ===== CONTACT BTN ENHANCED HOVER ===== */
+.contact-btn {
+    transition: all 0.4s var(--ease);
+}
+
+.contact-btn:hover {
+    transform: translateX(8px);
+}
+
+.contact-btn:hover .cb-icon {
+    transform: scale(1.1) rotate(5deg);
+    transition: transform 0.3s var(--ease);
+}
+
+/* ===== FOOTER WAVE ===== */
+.footer-wave {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.footer-wave svg {
+    width: 100%;
+    height: 100%;
+    animation: wave-drift 8s ease-in-out infinite;
+}
+
+@keyframes wave-drift {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-20px);
+    }
+}
+
+/* ===== ENHANCED ABOUT CHIPS ===== */
+.chip {
+    position: relative;
+    overflow: hidden;
+}
+
+.chip::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(124, 58, 237, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s, height 0.5s;
+}
+
+.chip:hover::before {
+    width: 200%;
+    height: 200%;
+}
+
+/* ===== NAVBAR SMOOTH HIDE/SHOW ===== */
+.navbar {
+    transition: all 0.4s var(--ease), transform 0.3s var(--ease);
+}
+
+/* ===== ENHANCED SCROLL INDICATOR ===== */
+.scroll-hint {
+    animation: scroll-hint-bob 3s ease-in-out infinite;
+}
+
+@keyframes scroll-hint-bob {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-8px);
+    }
+}
+
+/* ===== FLOATING BADGE PULSE ===== */
+.float-badge::after {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 16px;
+    border: 1px solid currentColor;
+    opacity: 0;
+    animation: badge-ring-pulse 3s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.fb-1::after {
+    animation-delay: 0s;
+}
+
+.fb-2::after {
+    animation-delay: 0.5s;
+}
+
+.fb-3::after {
+    animation-delay: 1s;
+}
+
+.fb-4::after {
+    animation-delay: 1.5s;
+}
+
+.fb-5::after {
+    animation-delay: 2s;
+}
+
+.fb-6::after {
+    animation-delay: 2.5s;
+}
+
+@keyframes badge-ring-pulse {
+
+    0%,
+    70%,
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    35% {
+        opacity: 0.4;
+        transform: scale(1.4);
+    }
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
     .hero-container {
@@ -2283,5 +2760,25 @@ code {
 
     .avatar-initials {
         font-size: 2.5rem;
+    }
+}
+
+/* Hide custom cursor on touch devices */
+@media (hover: none),
+(pointer: coarse) {
+
+    .cursor-dot,
+    .cursor-glow {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-spark {
+        display: none;
+    }
+
+    .section-glow-divider {
+        display: none;
     }
 }
