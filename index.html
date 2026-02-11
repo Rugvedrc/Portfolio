@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rugved Chandekar — AI/ML Developer & Engineer</title>
+    <meta name="description"
+        content="Portfolio of Rugved Chandekar — Final-year B.E. IT student building LLM-based systems, ML pipelines, and backend applications.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS - Animate on Scroll -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Animated Background Grid -->
+    <div class="bg-grid"></div>
+    <div class="bg-gradient-overlay"></div>
+
+    <!-- Floating Glow Blobs -->
+    <div class="blob-cont">
+        <div class="glow-blob blob-1"></div>
+    </div>
+    <div class="blob-cont">
+        <div class="glow-blob blob-2"></div>
+    </div>
+    <div class="blob-cont">
+        <div class="glow-blob blob-3"></div>
+    </div>
+    <div class="blob-cont">
+        <div class="glow-blob blob-4"></div>
+    </div>
+
+    <!-- ====== NAVBAR ====== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-angle">&lt;</span><span class="logo-text">RC</span><span
+                    class="logo-angle">/&gt;</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta">
+                <span>Let's Talk</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ====== HERO ====== -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-left" data-aos="fade-right" data-aos-duration="1000">
+                <div class="hero-badge">
+                    <span class="badge-pulse"></span>
+                    <span>Open to Work</span>
+                </div>
+                <h1 class="hero-title">
+                    Hey, I'm
+                    <span class="hero-name">Rugved<span class="accent-dot">.</span></span>
+                </h1>
+                <h2 class="hero-role">
+                    I craft <span class="typewriter" id="typewriter"></span><span class="cursor-blink">|</span>
+                </h2>
+                <p class="hero-desc">
+                    Final-year B.E. IT student passionate about building intelligent systems —
+                    from LLM pipelines to real-time backends. Currently optimizing agentic AI
+                    at <strong>Idyllic Services</strong>.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn-glow">
+                        <span>Explore Projects</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" />
+                        </svg>
+                    </a>
+                    <a href="https://github.com/Rugvedrc" target="_blank" class="btn-glass">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+                <!-- Hero Metrics -->
+                <div class="hero-metrics">
+                    <div class="metric" data-aos="fade-up" data-aos-delay="200">
+                        <span class="metric-num" data-count="4">0</span>
+                        <span class="metric-label">Years of Coding</span>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric" data-aos="fade-up" data-aos-delay="400">
+                        <span class="metric-num" data-count="10">0</span><span class="metric-plus">+</span>
+                        <span class="metric-label">Projects Built</span>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric" data-aos="fade-up" data-aos-delay="600">
+                        <span class="metric-num" data-count="1">0</span>
+                        <span class="metric-label">Hackathon Win</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-right" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+                <div class="hero-visual">
+                    <!-- Animated rings -->
+                    <div class="orbit-ring ring-1">
+                        <div class="orbit-dot"></div>
+                    </div>
+                    <div class="orbit-ring ring-2">
+                        <div class="orbit-dot"></div>
+                    </div>
+                    <div class="orbit-ring ring-3">
+                        <div class="orbit-dot"></div>
+                    </div>
+                    <!-- Central avatar -->
+                    <div class="hero-avatar">
+                        <div class="avatar-glow-ring"></div>
+                        <div class="avatar-inner">
+                            <span class="avatar-initials">RC</span>
+                        </div>
+                    </div>
+                    <!-- Floating tech badges -->
+                    <div class="float-badge fb-1"><i class="fab fa-python"></i></div>
+                    <div class="float-badge fb-2"><i class="fas fa-brain"></i></div>
+                    <div class="float-badge fb-3"><i class="fab fa-docker"></i></div>
+                    <div class="float-badge fb-4"><i class="fas fa-code"></i></div>
+                    <div class="float-badge fb-5"><i class="fas fa-database"></i></div>
+                    <div class="float-badge fb-6"><i class="fas fa-robot"></i></div>
+                </div>
+            </div>
+        </div>
+        <!-- Scroll indicator -->
+        <div class="scroll-hint">
+            <div class="scroll-line"></div>
+            <span>scroll</span>
+        </div>
+    </section>
+
+    <!-- ====== ABOUT ====== -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-label" data-aos="fade-up">
+                <span class="label-line"></span>
+                <span>About Me</span>
+            </div>
+            <h2 class="section-heading" data-aos="fade-up" data-aos-delay="100">
+                Turning Ideas into <span class="text-gradient">Intelligent Systems</span>
+            </h2>
+            <div class="about-layout">
+                <div class="about-text-col" data-aos="fade-right" data-aos-delay="200">
+                    <p>I'm a final-year <strong>B.E. Information Technology</strong> student with a deep obsession for
+                        AI and building things that work at scale.</p>
+                    <p>My core strengths lie in <strong>Python</strong>, <strong>LLMs</strong>, and applied ML — I've
+                        built everything from RAG-based chat systems to real-time collaborative editors. I believe in
+                        shipping fast, iterating faster.</p>
+                    <p>When I'm not coding, you'll find me mentoring 300+ students as the <strong>CP & DSA Lead</strong>
+                        at Hackslash or tinkering with new ML architectures.</p>
+                    <div class="about-chips">
+                        <span class="chip"><i class="fas fa-graduation-cap"></i> B.E. Information Technology</span>
+                        <span class="chip"><i class="fas fa-map-marker-alt"></i> Chh. Sambhajinagar, India</span>
+                        <span class="chip"><i class="fas fa-briefcase"></i> Associate Dev Intern</span>
+                        <span class="chip"><i class="fas fa-heart"></i> AI/ML Enthusiast</span>
+                    </div>
+                </div>
+                <div class="about-visual-col" data-aos="fade-left" data-aos-delay="300">
+                    <div class="code-terminal">
+                        <div class="terminal-bar">
+                            <div class="terminal-dots">
+                                <span class="td red"></span>
+                                <span class="td yellow"></span>
+                                <span class="td green"></span>
+                            </div>
+                            <span class="terminal-title">rugved.py</span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="code-line" style="--delay: 0"><span class="ck">class</span> <span
+                                    class="cc">Developer</span><span class="cp">:</span></div>
+                            <div class="code-line" style="--delay: 1"><span class="indent"></span><span
+                                    class="ck">def</span> <span class="cf">__init__</span><span class="cp">(</span><span
+                                    class="ca">self</span><span class="cp">):</span></div>
+                            <div class="code-line" style="--delay: 2"><span class="indent2"></span><span
+                                    class="ca">self</span>.name <span class="cp">=</span> <span class="cs">"Rugved
+                                    Chandekar"</span></div>
+                            <div class="code-line" style="--delay: 3"><span class="indent2"></span><span
+                                    class="ca">self</span>.role <span class="cp">=</span> <span class="cs">"AI/ML
+                                    Developer"</span></div>
+                            <div class="code-line" style="--delay: 4"><span class="indent2"></span><span
+                                    class="ca">self</span>.skills <span class="cp">=</span> <span class="cp">[</span>
+                            </div>
+                            <div class="code-line" style="--delay: 5"><span class="indent3"></span><span
+                                    class="cs">"Python"</span>, <span class="cs">"LLMs"</span>, <span
+                                    class="cs">"RAG"</span>,</div>
+                            <div class="code-line" style="--delay: 6"><span class="indent3"></span><span
+                                    class="cs">"Flask"</span>, <span class="cs">"ML/DL"</span></div>
+                            <div class="code-line" style="--delay: 7"><span class="indent2"></span><span
+                                    class="cp">]</span></div>
+                            <div class="code-line" style="--delay: 8"><span class="indent"></span></div>
+                            <div class="code-line" style="--delay: 9"><span class="indent"></span><span
+                                    class="ck">def</span> <span class="cf">status</span><span class="cp">(</span><span
+                                    class="ca">self</span><span class="cp">):</span></div>
+                            <div class="code-line" style="--delay: 10"><span class="indent2"></span><span
+                                    class="ck">return</span> <span class="cs">"Building the future 🚀"</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== SKILLS ====== -->
+    <section class="section section-alt" id="skills">
+        <div class="container">
+            <div class="section-label" data-aos="fade-up">
+                <span class="label-line"></span>
+                <span>Tech Stack</span>
+            </div>
+            <h2 class="section-heading" data-aos="fade-up" data-aos-delay="100">
+                Tools & Technologies I <span class="text-gradient">Work With</span>
+            </h2>
+
+            <!-- Animated Skills Marquee -->
+            <div class="skills-marquee" data-aos="fade-up" data-aos-delay="150">
+                <div class="marquee-track">
+                    <div class="marquee-item"><i class="fab fa-python"></i> Python</div>
+                    <div class="marquee-item"><span class="marquee-icon">🧠</span> TensorFlow</div>
+                    <div class="marquee-item"><i class="fas fa-flask"></i> Flask</div>
+                    <div class="marquee-item"><i class="fab fa-docker"></i> Docker</div>
+                    <div class="marquee-item"><span class="marquee-icon">⚡</span> PyTorch</div>
+                    <div class="marquee-item"><i class="fab fa-github"></i> GitHub</div>
+                    <div class="marquee-item"><span class="marquee-icon">📊</span> Pandas</div>
+                    <div class="marquee-item"><span class="marquee-icon">🤖</span> LLMs</div>
+                    <div class="marquee-item"><i class="fas fa-database"></i> SQL</div>
+                    <div class="marquee-item"><span class="marquee-icon">🔬</span> Scikit-learn</div>
+                    <!-- Duplicate 1 -->
+                    <div class="marquee-item"><i class="fab fa-python"></i> Python</div>
+                    <div class="marquee-item"><span class="marquee-icon">🧠</span> TensorFlow</div>
+                    <div class="marquee-item"><i class="fas fa-flask"></i> Flask</div>
+                    <div class="marquee-item"><i class="fab fa-docker"></i> Docker</div>
+                    <div class="marquee-item"><span class="marquee-icon">⚡</span> PyTorch</div>
+                    <div class="marquee-item"><i class="fab fa-github"></i> GitHub</div>
+                    <div class="marquee-item"><span class="marquee-icon">📊</span> Pandas</div>
+                    <div class="marquee-item"><span class="marquee-icon">🤖</span> LLMs</div>
+                    <div class="marquee-item"><i class="fas fa-database"></i> SQL</div>
+                    <div class="marquee-item"><span class="marquee-icon">🔬</span> Scikit-learn</div>
+                    <!-- Duplicate 2 for Ultra-Wide Screens -->
+                    <div class="marquee-item"><i class="fab fa-python"></i> Python</div>
+                    <div class="marquee-item"><span class="marquee-icon">🧠</span> TensorFlow</div>
+                    <div class="marquee-item"><i class="fas fa-flask"></i> Flask</div>
+                    <div class="marquee-item"><i class="fab fa-docker"></i> Docker</div>
+                    <div class="marquee-item"><span class="marquee-icon">⚡</span> PyTorch</div>
+                    <div class="marquee-item"><i class="fab fa-github"></i> GitHub</div>
+                    <div class="marquee-item"><span class="marquee-icon">📊</span> Pandas</div>
+                    <div class="marquee-item"><span class="marquee-icon">🤖</span> LLMs</div>
+                    <div class="marquee-item"><i class="fas fa-database"></i> SQL</div>
+                    <div class="marquee-item"><span class="marquee-icon">🔬</span> Scikit-learn</div>
+                </div>
+            </div>
+
+            <div class="skills-cards">
+                <div class="skill-card glass-panel" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon-wrap"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Programming & Data</h3>
+                    <div class="skill-tags">
+                        <span>Python</span><span>SQL</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span>
+                    </div>
+                    <div class="skill-bar-group">
+                        <div class="sbar"><span class="sbar-label">Python</span>
+                            <div class="sbar-track">
+                                <div class="sbar-fill" data-w="92"></div>
+                            </div>
+                        </div>
+                        <div class="sbar"><span class="sbar-label">SQL</span>
+                            <div class="sbar-track">
+                                <div class="sbar-fill" data-w="80"></div>
+                            </div>
+                        </div>
+                        <div class="sbar"><span class="sbar-label">Data Analysis</span>
+                            <div class="sbar-track">
+                                <div class="sbar-fill" data-w="87"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card glass-panel" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon-wrap purple"><i class="fas fa-brain"></i></div>
+                    <h3>Machine Learning & DL</h3>
+                    <div class="skill-tags">
+                        <span>Scikit-learn</span><span>TensorFlow</span><span>Keras</span><span>PyTorch</span><span>XGBoost</span>
+                    </div>
+                    <div class="skill-bar-group">
+                        <div class="sbar"><span class="sbar-label">Scikit-learn</span>
+                            <div class="sbar-track">
+                                <div class="sbar-fill purple" data-w="88"></div>
+                            </div>
+                        </div>
+                        <div class="sbar"><span class="sbar-label">TF / PyTorch</span>
+                            <div class="sbar-track">
+                                <div class="sbar-fill purple" data-w="78"></div>
+                            </div>
+                        </div>
+                        <div class="sbar"><span class="sbar-label">XGBoost</span>
+                            <div class="sbar-track">
+                                <div class="sbar-fill purple" data-w="82"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card glass-panel" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon-wrap teal"><i class="fas fa-server"></i></div>
+                    <h3>Backend & DevOps</h3>
+                    <div class="skill-tags">
+                        <span>Flask</span><span>REST
+                            APIs</span><span>Git</span><span>Docker</span><span>Kubernetes</span><span>Streamlit</span>
+                    </div>
+                    <div class="skill-bar-group">
+                        <div class="sbar"><span class="sbar-label">Flask / APIs</span>
+                            <div class="sbar-track">
+                                <div class="sbar-fill teal" data-w="86"></div>
+                            </div>
+                        </div>
+                        <div class="sbar"><span class="sbar-label">Git / GitHub</span>
+                            <div class="sbar-track">
+                                <div class="sbar-fill teal" data-w="90"></div>
+                            </div>
+                        </div>
+                        <div class="sbar"><span class="sbar-label">Docker / K8s</span>
+                            <div class="sbar-track">
+                                <div class="sbar-fill teal" data-w="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card glass-panel" data-aos="fade-up" data-aos-delay="400">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon-wrap amber"><i class="fas fa-microchip"></i></div>
+                    <h3>Core CS</h3>
+                    <div class="skill-tags">
+                        <span>DSA</span><span>DBMS</span><span>OOP</span><span>OS</span><span>Networks</span><span>System
+                            Design</span>
+                    </div>
+                    <div class="skill-bar-group">
+                        <div class="sbar"><span class="sbar-label">DSA</span>
+                            <div class="sbar-track">
+                                <div class="sbar-fill amber" data-w="85"></div>
+                            </div>
+                        </div>
+                        <div class="sbar"><span class="sbar-label">System Design</span>
+                            <div class="sbar-track">
+                                <div class="sbar-fill amber" data-w="78"></div>
+                            </div>
+                        </div>
+                        <div class="sbar"><span class="sbar-label">DBMS / OS</span>
+                            <div class="sbar-track">
+                                <div class="sbar-fill amber" data-w="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== EXPERIENCE ====== -->
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="section-label" data-aos="fade-up">
+                <span class="label-line"></span>
+                <span>Experience & Education</span>
+            </div>
+            <h2 class="section-heading" data-aos="fade-up" data-aos-delay="100">
+                My Professional <span class="text-gradient">Journey</span>
+            </h2>
+            <div class="exp-timeline">
+                <div class="exp-item" data-aos="fade-up" data-aos-delay="150">
+                    <div class="exp-dot">
+                        <div class="exp-dot-inner"></div>
+                    </div>
+                    <div class="exp-card glass-panel">
+                        <div class="exp-card-glow"></div>
+                        <div class="exp-top">
+                            <span class="exp-badge live">Current</span>
+                            <span class="exp-date"><i class="fas fa-calendar-alt"></i> Jan 2026 – Present</span>
+                        </div>
+                        <h3>Associate Developer Intern</h3>
+                        <h4><i class="fas fa-building"></i> Idyllic Services Pvt. Ltd</h4>
+                        <ul>
+                            <li>Built supervisor-led agentic AI for JD-driven candidate sourcing</li>
+                            <li>Achieved <strong>~99% reduction</strong> in token usage & <strong>~10× speed-up</strong>
+                            </li>
+                            <li>Integrated open-source components to cut external dependencies</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="exp-item" data-aos="fade-up" data-aos-delay="250">
+                    <div class="exp-dot">
+                        <div class="exp-dot-inner"></div>
+                    </div>
+                    <div class="exp-card glass-panel">
+                        <div class="exp-card-glow"></div>
+                        <div class="exp-top">
+                            <span class="exp-date"><i class="fas fa-calendar-alt"></i> Jun 2024 – Jun 2025</span>
+                        </div>
+                        <h3>CP & DSA Lead</h3>
+                        <h4><i class="fas fa-users"></i> Hackslash Community</h4>
+                        <ul>
+                            <li>Conducted <strong>5+ workshops</strong>, coding competitions & hackathons</li>
+                            <li>Mentored <strong>300+ students</strong> in DSA & problem-solving</li>
+                            <li>Built structured curriculum for competitive programming</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="exp-item" data-aos="fade-up" data-aos-delay="350">
+                    <div class="exp-dot">
+                        <div class="exp-dot-inner"></div>
+                    </div>
+                    <div class="exp-card glass-panel">
+                        <div class="exp-card-glow"></div>
+                        <div class="exp-top">
+                            <span class="exp-date"><i class="fas fa-calendar-alt"></i> 2022 – 2026</span>
+                        </div>
+                        <h3>B.E. Information Technology</h3>
+                        <h4><i class="fas fa-university"></i> Govt. Engineering College, Chh. Sambhajinagar</h4>
+                        <ul>
+                            <li>CGPA: <strong>7.27</strong></li>
+                            <li>Active in competitive programming & hackathons</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="exp-item" data-aos="fade-up" data-aos-delay="450">
+                    <div class="exp-dot">
+                        <div class="exp-dot-inner"></div>
+                    </div>
+                    <div class="exp-card glass-panel">
+                        <div class="exp-card-glow"></div>
+                        <div class="exp-top">
+                            <span class="exp-date"><i class="fas fa-calendar-alt"></i> 2020 – 2022</span>
+                        </div>
+                        <h3>Higher Secondary School (HSC)</h3>
+                        <h4><i class="fas fa-school"></i> Science Stream</h4>
+                        <ul>
+                            <li><strong>Maharashtra State Board</strong></li>
+                            <li>Percentage: <strong>87.17%</strong></li>
+                            <li>Focus on Physics, Chemistry, and Mathematics (PCM)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="exp-item" data-aos="fade-up" data-aos-delay="550">
+                    <div class="exp-dot">
+                        <div class="exp-dot-inner"></div>
+                    </div>
+                    <div class="exp-card glass-panel">
+                        <div class="exp-card-glow"></div>
+                        <div class="exp-top">
+                            <span class="exp-date"><i class="fas fa-calendar-alt"></i> Passed in 2020</span>
+                        </div>
+                        <h3>Indian Certificate of Secondary Education (ICSE)</h3>
+                        <h4><i class="fas fa-school"></i> High School Education</h4>
+                        <ul>
+                            <li><strong>ICSE Board</strong></li>
+                            <li>Percentage: <strong>84.20%</strong></li>
+                            <li>Strong foundation in Mathematics and Sciences</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== PROJECTS ====== -->
+    <section class="section section-alt" id="projects">
+        <div class="container">
+            <div class="section-label" data-aos="fade-up">
+                <span class="label-line"></span>
+                <span>Projects</span>
+            </div>
+            <h2 class="section-heading" data-aos="fade-up" data-aos-delay="100">
+                Featured <span class="text-gradient">Projects</span>
+            </h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="150"
+                style="text-align:center; color: var(--text-2); margin-bottom: 40px; font-size: 1.1rem;">
+                Explore my top builds below. For more, <a href="https://github.com/Rugvedrc" target="_blank"
+                    style="color: var(--accent); text-decoration: none; font-weight: 600; transition: color 0.3s;">visit
+                    my
+                    GitHub <i class="fas fa-arrow-right" style="font-size: 0.8em; margin-left: 4px;"></i></a>
+            </p>
+
+            <div class="projects-grid">
+                <div class="project-card glass-panel" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pcard-shimmer"></div>
+                    <div class="pcard-top">
+                        <div class="pcard-icon"><i class="fas fa-file-alt"></i></div>
+                        <span class="pcard-tag">LLM + RAG</span>
+                    </div>
+                    <h3>AI Resume Parser</h3>
+                    <p>LLM-based structured extraction with resume–JD alignment & RAG-powered "Chat with Resume"
+                        feature.</p>
+                    <div class="pcard-tech"><span>Python</span><span>LLMs</span><span>RAG</span><span>Flask</span></div>
+                    <div class="pcard-bottom">
+                        <span class="pcard-award"><i class="fas fa-trophy"></i> Hackathon Winner</span>
+                    </div>
+                </div>
+
+                <div class="project-card glass-panel" data-aos="fade-up" data-aos-delay="300">
+                    <div class="pcard-shimmer"></div>
+                    <div class="pcard-top">
+                        <div class="pcard-icon purple"><i class="fas fa-om"></i></div>
+                        <a href="https://raghavendrasewasangh.in/" target="_blank" class="pcard-link"><i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <h3>Raghavendra Swami Mutt</h3>
+                    <p>Full-stack booking system automating workflows — <strong>~90%</strong> less manual effort,
+                        <strong>~95%</strong> faster seva booking.
+                    </p>
+                    <div class="pcard-tech"><span>Python</span><span>MySQL</span><span>Full-Stack</span></div>
+                    <div class="pcard-bottom">
+                        <a href="https://raghavendrasewasangh.in/" target="_blank" class="pcard-live">Visit Live <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card glass-panel" data-aos="fade-up" data-aos-delay="400">
+                    <div class="pcard-shimmer"></div>
+                    <div class="pcard-top">
+                        <div class="pcard-icon teal"><i class="fas fa-users-cog"></i></div>
+                        <div class="pcard-links">
+                            <a href="https://codesync-collabrative-code-editor.onrender.com/" target="_blank"
+                                class="pcard-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/Rugvedrc/codesync-collabrative-code-editor" target="_blank"
+                                class="pcard-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3>Collaborative Code Editor</h3>
+                    <p>Real-time multi-user code editor with room-based sessions via WebSocket communication.</p>
+                    <div class="pcard-tech"><span>Flask</span><span>Socket.IO</span><span>WebSockets</span></div>
+                    <div class="pcard-bottom">
+                        <a href="https://codesync-collabrative-code-editor.onrender.com/" target="_blank"
+                            class="pcard-live">Visit Live <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card glass-panel" data-aos="fade-up" data-aos-delay="500">
+                    <div class="pcard-shimmer"></div>
+                    <div class="pcard-top">
+                        <div class="pcard-icon amber"><i class="fas fa-home"></i></div>
+                        <div class="pcard-links">
+                            <a href="https://smart-house-price-predictor.onrender.com/" target="_blank"
+                                class="pcard-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/Rugvedrc/smart-house-price-predictor" target="_blank"
+                                class="pcard-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3>House Price Predictor</h3>
+                    <p>XGBoost model (R² ≈ 0.88) with SHAP explainability, Flask backend & custom preprocessing
+                        pipelines.</p>
+                    <div class="pcard-tech"><span>XGBoost</span><span>SHAP</span><span>Flask</span><span>Python</span>
+                    </div>
+                    <div class="pcard-bottom">
+                        <a href="https://smart-house-price-predictor.onrender.com/" target="_blank"
+                            class="pcard-live">Visit
+                            Live <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== ACHIEVEMENTS ====== -->
+    <section class="section" id="achievements">
+        <div class="container">
+            <div class="section-label" data-aos="fade-up">
+                <span class="label-line"></span>
+                <span>Achievements</span>
+            </div>
+            <h2 class="section-heading" data-aos="fade-up" data-aos-delay="100">
+                Milestones & <span class="text-gradient">Wins</span>
+            </h2>
+            <div class="achievements-row">
+                <div class="ach-card glass-panel" data-aos="flip-left" data-aos-delay="100">
+                    <div class="ach-icon"><i class="fas fa-microscope"></i></div>
+                    <h3>IEEE Paper</h3>
+                    <p>Co-authored "Uncertainty-Aware Pneumonia Detection" — submitted to IEEE 2026</p>
+                </div>
+                <div class="ach-card glass-panel" data-aos="flip-left" data-aos-delay="200">
+                    <div class="ach-icon trophy anim-float"><i class="fas fa-trophy"></i></div>
+                    <h3>Hackathon Winner</h3>
+                    <p>Won college hackathon with AI Resume Parser (LLM-based)</p>
+                </div>
+                <div class="ach-card glass-panel" data-aos="flip-left" data-aos-delay="300">
+                    <div class="ach-icon purple"><i class="fab fa-python"></i></div>
+                    <h3>PyPI Library</h3>
+                    <p>Published <code>integration-smoke-test</code> for API health checks</p>
+                </div>
+                <div class="ach-card glass-panel" data-aos="flip-left" data-aos-delay="400">
+                    <div class="ach-icon teal"><i class="fas fa-ranking-star"></i></div>
+                    <h3>CCAT AIR 308</h3>
+                    <p>All India Rank 308 — strong DSA, programming & CS fundamentals</p>
+                </div>
+                <div class="ach-card glass-panel" data-aos="flip-left" data-aos-delay="500">
+                    <div class="ach-icon amber anim-pulse"><i class="fas fa-chart-line"></i></div>
+                    <h3>Tata GenAI</h3>
+                    <p>Completed Tata GenAI Data Analytics — EDA, modeling & responsible AI</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== CONTACT ====== -->
+    <section class="section section-alt" id="contact">
+        <div class="container">
+            <div class="section-label" data-aos="fade-up">
+                <span class="label-line"></span>
+                <span>Get in Touch</span>
+            </div>
+            <h2 class="section-heading" data-aos="fade-up" data-aos-delay="100">
+                Let's Build Something <span class="text-gradient">Together</span>
+            </h2>
+            <p class="section-sub" data-aos="fade-up" data-aos-delay="150">Have a project idea or opportunity? I'd love
+                to hear about it.</p>
+
+            <div class="contact-layout">
+                <div class="contact-links" data-aos="fade-right" data-aos-delay="200">
+                    <a href="mailto:rugvedchandekar@gmail.com" class="contact-btn glass-panel">
+                        <div class="cb-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="cb-info">
+                            <span class="cb-label">Email</span>
+                            <span class="cb-value">rugvedchandekar@gmail.com</span>
+                        </div>
+                        <i class="fas fa-arrow-right cb-arrow"></i>
+                    </a>
+                    <a href="https://github.com/Rugvedrc" target="_blank" class="contact-btn glass-panel">
+                        <div class="cb-icon github"><i class="fab fa-github"></i></div>
+                        <div class="cb-info">
+                            <span class="cb-label">GitHub</span>
+                            <span class="cb-value">github.com/Rugvedrc</span>
+                        </div>
+                        <i class="fas fa-arrow-right cb-arrow"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/rugvedchandekar/" target="_blank"
+                        class="contact-btn glass-panel">
+                        <div class="cb-icon linkedin"><i class="fab fa-linkedin"></i></div>
+                        <div class="cb-info">
+                            <span class="cb-label">LinkedIn</span>
+                            <span class="cb-value">linkedin.com/in/rugvedchandekar</span>
+                        </div>
+                        <i class="fas fa-arrow-right cb-arrow"></i>
+                    </a>
+                </div>
+                <div class="contact-form-wrap glass-panel" data-aos="fade-left" data-aos-delay="300">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-field">
+                            <input type="text" id="cf-name" placeholder=" " required>
+                            <label for="cf-name">Your Name</label>
+                            <div class="field-glow"></div>
+                        </div>
+                        <div class="form-field">
+                            <input type="email" id="cf-email" placeholder=" " required>
+                            <label for="cf-email">Your Email</label>
+                            <div class="field-glow"></div>
+                        </div>
+                        <div class="form-field">
+                            <textarea id="cf-msg" rows="4" placeholder=" " required></textarea>
+                            <label for="cf-msg">Your Message</label>
+                            <div class="field-glow"></div>
+                        </div>
+                        <button type="submit" class="btn-glow full-width" id="submit-btn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer">
+        <div class="footer-glow"></div>
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <span class="logo-angle">&lt;</span><span class="logo-text">RC</span><span
+                        class="logo-angle">/&gt;</span>
+                </div>
+                <p>Designed & developed by <strong>Rugved Chandekar</strong></p>
+                <div class="footer-social">
+                    <a href="https://github.com/Rugvedrc" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/rugvedchandekar/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="mailto:rugvedchandekar@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+                <span class="footer-copy">&copy; 2026 Rugved Chandekar</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <!-- Vanilla Tilt -->
+    <script src="https://unpkg.com/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
