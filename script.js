@@ -443,56 +443,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ===== CONTACT FORM =====
-    const form = document.getElementById('contact-form');
-    if (form) {
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            const btn = document.getElementById('submit-btn');
-            const orig = btn.innerHTML;
-
-            btn.innerHTML = '<span>Sending...</span><i class="fas fa-circle-notch fa-spin"></i>';
-            btn.disabled = true;
-            btn.style.opacity = '0.8';
-
-            setTimeout(() => {
-                btn.innerHTML = '<span>Sent! ✓</span>';
-                btn.style.background = 'linear-gradient(135deg, #34d399, #059669)';
-                btn.style.opacity = '1';
-
-                // Confetti burst effect
-                createConfetti(btn);
-
-                setTimeout(() => {
-                    btn.innerHTML = orig;
-                    btn.style.background = '';
-                    btn.disabled = false;
-                    form.reset();
-                }, 2500);
-            }, 1500);
-        });
-    }
-
-    // ===== CONFETTI BURST =====
-    function createConfetti(origin) {
-        const rect = origin.getBoundingClientRect();
-        const cx = rect.left + rect.width / 2;
-        const cy = rect.top + rect.height / 2;
-        const colors = ['#7c3aed', '#06b6d4', '#d946ef', '#f43f5e', '#10b981', '#f59e0b'];
-
-        for (let i = 0; i < 30; i++) {
-            const confetti = document.createElement('div');
-            confetti.classList.add('confetti-piece');
-            confetti.style.left = cx + 'px';
-            confetti.style.top = cy + 'px';
-            confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
-            confetti.style.setProperty('--angle', (Math.random() * 360) + 'deg');
-            confetti.style.setProperty('--distance', (Math.random() * 150 + 50) + 'px');
-            confetti.style.setProperty('--rot', (Math.random() * 720 - 360) + 'deg');
-            document.body.appendChild(confetti);
-            setTimeout(() => confetti.remove(), 1000);
-        }
-    }
 
     // ===== PARALLAX BLOBS =====
     let ticking = false;

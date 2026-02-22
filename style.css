@@ -1920,7 +1920,8 @@ code {
     display: grid;
     grid-template-columns: 1fr 1.4fr;
     gap: 36px;
-    align-items: start;
+    align-items: stretch;
+    /* Match height of both sides */
 }
 
 .contact-links {
@@ -1998,75 +1999,153 @@ code {
 /* Contact Animation Removed */
 /* .contact-anim-wrap { display: none; } */
 
-/* Contact Form */
-.contact-form-wrap {
-    padding: 32px;
+/* Buy Me a Coffee Section */
+.bmc-card-wrap {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background: rgba(10, 15, 30, 0.45);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid rgba(124, 58, 237, 0.15);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    border-radius: 24px;
 }
 
-.form-field {
-    position: relative;
-    margin-bottom: 18px;
-}
-
-.form-field input,
-.form-field textarea {
-    width: 100%;
-    padding: 14px 16px;
-    font-family: var(--font);
-    font-size: 0.9rem;
-    color: var(--text-1);
-    background: rgba(0, 0, 0, 0.15);
-    border: 1px solid rgba(99, 132, 255, 0.1);
-    border-radius: var(--radius-sm);
-    outline: none;
-    transition: all 0.3s var(--ease);
-    resize: vertical;
-}
-
-.form-field input:focus,
-.form-field textarea:focus {
+.bmc-card-wrap:hover {
     border-color: var(--accent);
-    box-shadow: 0 0 20px rgba(108, 99, 255, 0.1);
+    box-shadow: var(--glow-accent), 0 25px 60px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
 }
 
-.form-field label {
-    position: absolute;
-    left: 16px;
-    top: 14px;
-    font-size: 0.88rem;
-    color: var(--text-3);
-    pointer-events: none;
-    transition: all 0.3s var(--ease);
-}
-
-.form-field input:focus+label,
-.form-field input:not(:placeholder-shown)+label,
-.form-field textarea:focus+label,
-.form-field textarea:not(:placeholder-shown)+label {
-    top: -8px;
-    left: 12px;
-    font-size: 0.7rem;
-    color: var(--accent-light);
-    background: var(--bg-card);
-    padding: 0 6px;
-}
-
-.field-glow {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 2px;
-    background: var(--grad-1);
-    border-radius: 1px;
-    transition: width 0.4s var(--ease);
-}
-
-.form-field input:focus~.field-glow,
-.form-field textarea:focus~.field-glow {
+.bmc-content {
+    max-width: 380px;
     width: 100%;
 }
+
+.bmc-icon-large {
+    font-size: 2.8rem;
+    color: #FFDD00;
+    margin-bottom: 16px;
+    filter: drop-shadow(0 0 15px rgba(255, 221, 0, 0.5));
+    animation: coffee-float 3s ease-in-out infinite;
+}
+
+@keyframes coffee-float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(6deg);
+    }
+}
+
+.bmc-content h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.bmc-content p {
+    font-size: 0.9rem;
+    color: var(--text-2);
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+/* Custom BMC Button - Matching Site Aesthetic */
+.bmc-button-custom {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 24px;
+    background: rgba(255, 221, 0, 0.1);
+    color: #FFDD00;
+    border: 1px solid rgba(255, 221, 0, 0.4);
+    font-weight: 700;
+    font-size: 0.9rem;
+    border-radius: 14px;
+    transition: all 0.4s var(--ease);
+    text-decoration: none;
+}
+
+.bmc-button-custom:hover {
+    transform: translateY(-3px);
+    background: #FFDD00;
+    color: #000000;
+    box-shadow: 0 10px 25px rgba(255, 221, 0, 0.3);
+}
+
+.bmc-button-custom i {
+    font-size: 1.1rem;
+}
+
+.bmc-badges {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+.bmc-badge {
+    font-size: 0.75rem;
+    color: #cbd5e1;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 6px 12px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bmc-badge i {
+    color: #FFDD00;
+}
+
+/* Responsive adjustments for BMC */
+@media (max-width: 768px) {
+    .bmc-card-wrap {
+        padding: 40px 24px;
+        min-height: auto;
+    }
+
+    .bmc-icon-large {
+        font-size: 3rem;
+    }
+
+    .bmc-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .bmc-content p {
+        font-size: 0.95rem;
+    }
+
+    .bmc-btn-glow img {
+        height: 52px;
+    }
+
+    .bmc-badges {
+        gap: 10px;
+    }
+
+    .bmc-badge {
+        font-size: 0.7rem;
+        padding: 6px 12px;
+    }
+}
+
+
 
 /* ===== FOOTER ===== */
 .footer {
